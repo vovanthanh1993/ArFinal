@@ -8513,7 +8513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cancel
+  m_Text: Hide Menu
 --- !u!222 &1972491479
 CanvasRenderer:
   m_ObjectHideFlags: 0

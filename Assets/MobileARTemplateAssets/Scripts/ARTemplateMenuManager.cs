@@ -325,7 +325,7 @@ public class ARTemplateMenuManager : MonoBehaviour
             }
         }
 
-        HideMenu();
+        //HideMenu();
     }
 
     void ShowMenu()
