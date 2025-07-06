@@ -272,7 +272,7 @@ public class ARTemplateMenuManager : MonoBehaviour
             if (!m_IsPointerOverUI && (m_TapStartPositionInput.TryReadValue(out _) || m_DragCurrentPositionInput.TryReadValue(out _)))
             {
                 if (m_ShowObjectMenu)
-                    HideMenu();
+                    //HideMenu();
 
                 if (m_ShowOptionsModal)
                     m_ModalMenu.SetActive(false);
@@ -280,13 +280,13 @@ public class ARTemplateMenuManager : MonoBehaviour
 
             if (m_ShowObjectMenu)
             {
-                m_DeleteButton.gameObject.SetActive(false);
+                //m_DeleteButton.gameObject.SetActive(false);
             }
             else
             {
-                m_DeleteButton.gameObject.SetActive(m_InteractionGroup?.focusInteractable != null);
+                //m_DeleteButton.gameObject.SetActive(m_InteractionGroup?.focusInteractable != null);
             }
-
+            m_DeleteButton.gameObject.SetActive(m_InteractionGroup?.focusInteractable != null);
             m_IsPointerOverUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(-1);
         }
         else
