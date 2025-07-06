@@ -342,21 +342,46 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             }
         }
 
+
         void OnRaySelectEntered(SelectEnterEventArgs args)
         {
+            Debug.Log($"selected - Color changed to red");
             if (m_RayInteractor.manipulateAttachTransform)
             {
                 // Disable locomotion and turn actions
                 DisableAllLocomotionActions();
             }
+
+            // Đổi màu đối tượng thành đỏ khi được chọn
+            if (args.interactableObject != null)
+            {
+                var interactable = args.interactableObject as UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable;
+                if (interactable != null)
+                {
+                    ChangeObjectColor(interactable.gameObject, Color.red);
+                    Debug.Log($"Object {interactable.gameObject.name} selected - Color changed to red");
+                }
+            }
         }
 
         void OnRaySelectExited(SelectExitEventArgs args)
         {
+            Debug.Log($"selected - Color changed t111o red");
             if (m_RayInteractor.manipulateAttachTransform)
             {
                 // Re-enable the locomotion and turn actions
                 UpdateLocomotionActions();
+            }
+
+            // Khôi phục màu ban đầu khi bỏ chọn
+            if (args.interactableObject != null)
+            {
+                var interactable = args.interactableObject as UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable;
+                if (interactable != null)
+                {
+                    RestoreObjectColor(interactable.gameObject);
+                    Debug.Log($"Object {interactable.gameObject.name} deselected - Color restored to original");
+                }
             }
         }
 
@@ -411,6 +436,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
         protected void Start()
         {
+            Debug.Log($"selected Start");
             m_StartCalled = true;
 
             // Ensure the enabled state of locomotion and turn actions are properly set up.
@@ -525,6 +551,40 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 #pragma warning disable IDE0031 // Use null propagation -- Do not use for UnityEngine.Object types
             return actionReference != null ? actionReference.action : null;
 #pragma warning restore IDE0031
+        }
+
+        // Dictionary để lưu màu ban đầu của các đối tượng
+        readonly Dictionary<GameObject, Color> m_OriginalColors = new Dictionary<GameObject, Color>();
+
+        /// <summary>
+        /// Đổi màu đối tượng thành màu được chỉ định
+        /// </summary>
+        void ChangeObjectColor(GameObject obj, Color color)
+        {
+            var renderer = obj.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                // Lưu màu ban đầu nếu chưa có
+                if (!m_OriginalColors.ContainsKey(obj))
+                {
+                    m_OriginalColors[obj] = renderer.material.color;
+                }
+                
+                // Đổi màu
+                renderer.material.color = color;
+            }
+        }
+
+        /// <summary>
+        /// Khôi phục màu ban đầu của đối tượng
+        /// </summary>
+        void RestoreObjectColor(GameObject obj)
+        {
+            var renderer = obj.GetComponent<Renderer>();
+            if (renderer != null && m_OriginalColors.ContainsKey(obj))
+            {
+                renderer.material.color = m_OriginalColors[obj];
+            }
         }
     }
 }

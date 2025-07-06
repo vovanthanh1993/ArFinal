@@ -423,6 +423,7 @@ public class ARTemplateMenuManager : MonoBehaviour
 
     void DeleteFocusedObject()
     {
+        Debug.Log("DeleteFocusedObject");
         var currentFocusedObject = m_InteractionGroup.focusInteractable;
         if (currentFocusedObject != null)
         {

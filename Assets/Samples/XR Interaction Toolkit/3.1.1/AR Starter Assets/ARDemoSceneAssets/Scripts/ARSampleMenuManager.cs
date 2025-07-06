@@ -141,6 +141,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         void Start()
         {
             HideMenu();
+            
         }
 
         void Update()
@@ -213,6 +214,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
 
         void DeleteFocusedObject()
         {
+            Debug.Log("DeleteFocusedObject");
             if (m_InteractionGroup == null)
                 return;
 

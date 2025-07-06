@@ -86,8 +86,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5987033754838845513, guid: a42ad6a4668ecfb44a1f036838e43f67,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3367329030377483536}
   m_SourcePrefab: {fileID: 100100000, guid: a42ad6a4668ecfb44a1f036838e43f67, type: 3}
+--- !u!1 &1701827596668681819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5987033754838845513, guid: a42ad6a4668ecfb44a1f036838e43f67,
+    type: 3}
+  m_PrefabInstance: {fileID: 4938245730953721362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3367329030377483536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701827596668681819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e284eb7f222aa9144b7387f01ad83a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2077790562891916513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6367500355248394995, guid: a42ad6a4668ecfb44a1f036838e43f67,
@@ -122,6 +144,76 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3367329030377483536}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3367329030377483536}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFocusExited
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFocusEntered
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeColorOnSelect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeColorOnSelect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814171574274837042, guid: 8ae99c55d89c449b4be74f60dc81e02b,
+        type: 3}
+      propertyPath: m_FocusEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5923104921834008719, guid: 8ae99c55d89c449b4be74f60dc81e02b,
         type: 3}
